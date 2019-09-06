@@ -155,6 +155,17 @@ body[data-tags~="closet"] {
 var finalGrade = 90;
 var teamOpinion = 70;
 
+(function () {
+	var preload = ["https://erinjktruesdell.com/wp-content/uploads/2019/09/meetingTable-1.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/closet.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/dormroom.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/desk-1.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/classroom.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/campus-1.png"];
+
+	window._ImageCache = preload.map(function (url) {
+		var image = document.createElement('img');
+		image.src = url;
+		return image;
+	});
+})();
+
+
 
 
 
