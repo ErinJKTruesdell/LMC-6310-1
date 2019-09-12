@@ -168,6 +168,7 @@ body[data-tags~="closet"] {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">(function () {
 	var preload = ["https://erinjktruesdell.com/wp-content/uploads/2019/09/meetingTable-1.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/closet.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/dormroom.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/desk-1.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/classroom.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/campus-1.png"];
 
@@ -177,6 +178,7 @@ body[data-tags~="closet"] {
 		return image;
 	});
 })();
+
 
 
 
@@ -235,8 +237,8 @@ Should you [[speak up]] or pass and [[let him take it]]?</tw-passagedata><tw-pas
 He continues to explain how max load bearing calculations center around predicting the amount of weight an object can hold before failure. He describes the many different aspects of these equations, including the strength of building materials.
 
 [[You nod your head]] to assure him that you really do know what you&#39;re talking about.&lt;&lt;nobr&gt;&gt;
-&lt;&lt;set finalGrade += 5&gt;&gt;
-&lt;&lt;set internalMotivation += 5&gt;&gt;
+&lt;&lt;set $finalGrade += 5&gt;&gt;
+&lt;&lt;set $internalMotivation += 5&gt;&gt;
 &lt;&lt;set $doCalcs to &quot;true&quot;&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="let him take it" tags="meeting" position="489,1148" size="100,100">He takes it and you think to yourself how much you wanted to do that, but know that your teammates might be more amicable to you if you go with the flow. &lt;&lt;if $takeNotes is &quot;false&quot;&gt;&gt;After all, you don&#39;t want to ruffle too many feathers and may have already made things awkward by fighting against taking notes.&lt;&lt;endif&gt;&gt;
 
@@ -246,9 +248,7 @@ You [[return to your dorm]] and the walk seems longer than it did this morning. 
 
 Your roommate looks up from her Cup-O-Noodles and pauses her //The Good Place// marathon to ask about how your day went.
 
-Your think for a moment before deciding to [[share-&gt;vent]] about all the crap you just had to deal with on the first day or simply [[tell her it was fine]].</tw-passagedata><tw-passagedata pid="13" name="vent" tags="dorm" position="320,1663" size="100,100">You explain to her about all the nonsense you had to deal with from your teammates. &lt;&lt;if $doCals is &quot;true&quot; or $takeNotes is &quot;false&quot;&gt;&gt;She reassures you that you absolutely did the right thing, and is sad to say it may not be an isolated event. Engineering doesn&#39;t have the most inclusive reputation.&lt;&lt;endif&gt;&gt;
-
-&lt;&lt;else&gt;&gt;She reminds you that you deserve as much of a chance as anyone and not to feel bad for standing up for yourself in the future, but she understands that a new group can be a difficult place to feel comfortable enough to speak your mind.&lt;&lt;endelse&gt;&gt;
+Your think for a moment before deciding to [[share-&gt;vent]] about all the crap you just had to deal with on the first day or simply [[tell her it was fine]].</tw-passagedata><tw-passagedata pid="13" name="vent" tags="dorm" position="320,1663" size="100,100">You explain to her about all the nonsense you had to deal with from your teammates. &lt;&lt;if $doCals is &quot;true&quot; or $takeNotes is &quot;false&quot;&gt;&gt;She reassures you that you absolutely did the right thing, and is sad to say it may not be an isolated event. Engineering doesn&#39;t have the most inclusive reputation. &lt;&lt;else&gt;&gt;She reminds you that you deserve as much of a chance as anyone and not to feel bad for standing up for yourself in the future, but she understands that a new group can be a difficult place to feel comfortable enough to speak your mind.&lt;&lt;endif&gt;&gt;
 
 At least she understood where you were coming from, and you feel less isolated [[moving forward]]. &lt;&lt;nobr&gt;&gt;
 
@@ -291,7 +291,7 @@ You [[explain how that sucks and share in the venting session-&gt;commiserate]] 
 Flash forward to your [[next meeting-&gt;next meeting pt 2]].&lt;&lt;nobr&gt;&gt;
 
 &lt;&lt;set $internalMotivation += 5&gt;&gt;
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="be a listening ear" tags="dorm" position="453,2801" size="100,100">You listen to her vent and vent and think to yourself that you&#39;re glad you&#39;re not the only one who&#39;s dealing with something like this. She appreciates you being there for her to hear her out.
+&lt;&lt;endnobr&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="be a listening ear" tags="dorm" position="453,2801" size="100,100">You listen to her vent and vent and think to yourself that you&#39;re glad you&#39;re not the only one who&#39;s dealing with something like this. She appreciates you being there for her to hear her out.
 
 Flash forward to your [[next meeting-&gt;next meeting pt 2]].&lt;&lt;nobr&gt;&gt;
 
@@ -323,7 +323,7 @@ She&#39;s not an engineer, but she&#39;s happy to sit and listen while you talk 
 You sleep well that night, feeling accomplished. Way to work hard!
 
 As the deadline approaches, your team [[gathers one last time-&gt;go to last meeting]].
-&lt;&lt;else if $takeNotes is &quot;true&quot;&gt;&gt;\
+&lt;&lt;elseif $takeNotes is &quot;true&quot;&gt;&gt;\
 You show her the notes you&#39;ve been keeping, and how you&#39;ve even left out the parts where you stepped in to help other teammates with their own assigned tasks. She reassures you that your minutes are fine and mentions that your classmates sound like idiots sometimes. If she only knew...
 
 You go to sleep well knowing that at least someone has your back.
@@ -334,7 +334,7 @@ You show her the designs you&#39;ve been working up for your bridge, but explain
 &lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="go to last meeting" tags="meeting" position="392,3782" size="100,100">&lt;&lt;if $doCals is &quot;true&quot;&gt;&gt;\
 You bring your final calculations to the last meeting and present them to your team. They are a little unsure&lt;&lt;if $bridgeDesign is &quot;false&quot;&gt;&gt;, because frankly they thought the failure load would be much greater&lt;&lt;endif&gt;&gt;. You assure them the calculations are correct. Another teammate double checks your work - in a respectful manner this time - and confirms your math checks out.
 
-&lt;&lt;else if $takeNotes is &quot;true&quot;&gt;&gt;\
+&lt;&lt;elseif $takeNotes is &quot;true&quot;&gt;&gt;\
 You show the team the final document, and they express doubt about the way things are presented, thinking they&#39;ve done more work than they actually have.
 
 Duncan says that he can see the improvment in your notes after the two of you discussed them last meeting. You let it slide because at some point it just isn&#39;t worth it.
@@ -357,16 +357,21 @@ You start to add weight to your bridge and look at the pitiful amount of weight 
 &lt;&lt;elseif $doCalcs is &quot;false&quot; and $bridgeDesign is &quot;true&quot;&gt;&gt;\
 You make sure to carry your beautiful bridge to the front to ensure you don&#39;t end up like that //other// group before you. The professor starts to add weight to the bridge, then continues to add more - and more - and more - until it finally gives way. Your bridge almost held twice the predicted amount. You chalk it up to a personal win because it was your design. You just wish you took the chance to do the prediction calculations, but at least the presentation is over. [[As you head out into the hall, you hear someone flag you down from behind-&gt;nice teammate]].
 
-&lt;&lt;else if $doCals is &quot;true&quot; and $bridgeDesign is &quot;true&quot;&gt;&gt;\
+&lt;&lt;elseif $doCals is &quot;true&quot; and $bridgeDesign is &quot;true&quot;&gt;&gt;\
 You make sure to carry your beautiful bridge to the front because, knowing your teammates, they&#39;d probably end up like that //other// group before you. You hand off your semester long child to the professor along with your load calculations. He didn&#39;t have enough weight set out on the table already, so he makes you wait at the front of the class while he goes to get more - these calculations better be accurate or you&#39;ll really look like a fool in front of everyone. He finally returns and starts to add the weights pound by pound. Pretty soon, he&#39;s going 3 pounds each just to save time. You notice the bridge bending right as the numbers begin to match yours followed by a trickle of weights dropping to the floor when your bridge gives way a half ounce before your predicted load - that&#39;s the closest in the class! Your teammates don&#39;t look nearly as impressed as you though. It may be because you had to step on some toes to get here, but hey, they&#39;re walking out of here with a great grade thanks to you. [[As you head out into the hall, you hear someone flag you down from behind-&gt;nice teammate]].
 
 &lt;&lt;else&gt;&gt;\
 You begin to bring your bridge up to the front, fully knowing that this is going to be an awfully embarassing ordeal. Your bridge design can barely hold its own weight, so the high calculation your team is about to hand in may as well be a joke. On the way to the front, you consider tripping just to save some embarassment. You laugh it off and [[turn in your janky bridge]].
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="receive your final grade" tags="desk" position="416,4496" size="100,100">Here we tell the player their final grade, and also a qualitative thing about teammate evals depending on the eval percentage: 0-50 is unfavorable, 50-70 is &quot;adequate&quot; or &quot;average&quot;, and 70+ is &quot;favorable&quot;. fun language here about whether they thought she was pleasant or rude (because that&#39;s what matters)
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="receive your final grade" tags="desk" position="416,4496" size="100,100">Average Team Evaluation Grade: $teamOpinion%
+Final Grade: $finalGrade%
 
-if grade is good (85 or higher), +5% internal motivation
-if adequate, nothing
-if poor (less than 75), -5% internal motivation
+Here we tell the player their final grade, and also a qualitative thing about teammate evals depending on the eval percentage: 0-50 is unfavorable, 50-70 is &quot;adequate&quot; or &quot;average&quot;, and 70+ is &quot;favorable&quot;. fun language here about whether they thought she was pleasant or rude (because that&#39;s what matters)
+
+&lt;&lt;if $finalGrade &gt;= 85&gt;&gt;
+&lt;&lt;set internalMotivation += 5&gt;&gt;
+&lt;&lt;elseif $finalGrade &lt;= 75&gt;&gt;
+&lt;&lt;set internalMotivation -=5&gt;&gt;
+&lt;&lt;endif&gt;&gt;
 
 [[epilogue]]</tw-passagedata><tw-passagedata pid="37" name="epilogue" tags="campus" position="416,4644" size="100,100">3-4 endings depending on internal motivation score.
 
