@@ -169,6 +169,7 @@ body[data-tags~="closet"] {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">(function () {
 	var preload = ["https://erinjktruesdell.com/wp-content/uploads/2019/09/meetingTable-1.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/closet.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/dormroom.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/desk-1.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/classroom.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/campus-1.png"];
 
@@ -178,6 +179,7 @@ body[data-tags~="closet"] {
 		return image;
 	});
 })();
+
 
 
 
@@ -223,14 +225,11 @@ You think for a moment before you [[agree to take minutes]] or [[say no]].</tw-p
 &lt;&lt;set $internalMotivation -= 5&gt;&gt;
 &lt;&lt;endnobr&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="say no" tags="meeting" position="489,808" size="100,100">You look at him waiting for the punchline. Wait...he&#39;s serious? You ask him if he&#39;s kidding, but he doesn&#39;t seem to understand what you mean. You ask him if he assumed you&#39;d take the notes just because you&#39;re a woman. He says it&#39;s fine and that he&#39;ll take the notes. He reaches for his bag to take out some paper, but not without grumbling something under his breath.
 
-You did it. You stood up for yourself, but you may have ruffled some feathers in the process. You hope that won&#39;t negatively change how the [[team divides tasks]].&lt;&lt;nobr&gt;&gt;
-
+You did it. You stood up for yourself, but you may have ruffled some feathers in the process. You hope that won&#39;t negatively change how the [[team divides tasks]].
+&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $finalGrade -= 10&gt;&gt;
 &lt;&lt;set $teamOpinion -= 15&gt;&gt;
-&lt;&lt;endnobr&gt;&gt;
-
-
-</tw-passagedata><tw-passagedata pid="8" name="team divides tasks" tags="meeting" position="412,998" size="100,100">Your team moves on and continues to divvy up the tasks in the project. Someone mentions that there should be a designated person in charge of ensuring the math calculations are accurate. A major part of this grade is calculating the max load of the bridge before failure, and that is right up your alley - you think you&#39;ll do a good job because you&#39;ve done it before. Will the other guys trust you to do that? You get caught up second guessing yourself, but someone has to say something. You see another guy in the group contemplate taking the role, and he may take it if you don&#39;t.
+&lt;&lt;endnobr&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="team divides tasks" tags="meeting" position="412,998" size="100,100">Your team moves on and continues to divvy up the tasks in the project. Someone mentions that there should be a designated person in charge of ensuring the math calculations are accurate. A major part of this grade is calculating the max load of the bridge before failure, and that is right up your alley - you think you&#39;ll do a good job because you&#39;ve done it before. Will the other guys trust you to do that? You get caught up second guessing yourself, but someone has to say something. You see another guy in the group contemplate taking the role, and he may take it if you don&#39;t.
 
 Should you [[speak up]] or pass and [[let him take it]]?</tw-passagedata><tw-passagedata pid="9" name="speak up" tags="meeting" position="339,1148" size="100,100">You say you want to do the task. Another guy asks how much experience you have had working with these kinds of equations, and you assure him that you&#39;ve done them before. You mention you worked on a similar project involving load bearing in high school.
 
@@ -316,22 +315,20 @@ Your team finishes up the meeting work and you [[remind your teammates of the de
 You&#39;re glad you reminded everyone of the deadline because they didn&#39;t realize it was coming up so fast. [[On your way home you realize you&#39;ll have to really stretch the amount of work your team actually got to do for your notes to look atequate-&gt;return to your dorm pt. 3]].
 &lt;&lt;else&gt;&gt;\
 You&#39;re glad you reminded everyone of the quickly approaching deadline as Alan, who was supposed to be on top of that, mentions he thought it was due the week after. [[You go home and resolve to bang your head against this calculation some more-&gt;return to your dorm pt. 3]].
-&lt;&lt;endif&gt;&gt;
-</tw-passagedata><tw-passagedata pid="29" name="return to your dorm pt. 3" tags="desk" position="394,3484" size="100,100">You sit at your desk and start hacking away at the work you&#39;ve got to do. Your roommate looks over your shoulder, and asks what you&#39;re up to, so you [[fill her in-&gt;tell her]].</tw-passagedata><tw-passagedata pid="30" name="tell her" tags="desk" position="392,3634" size="100,100">&lt;&lt;if $doCals is &quot;true&quot;&gt;&gt;\
+&lt;&lt;endif&gt;&gt;\</tw-passagedata><tw-passagedata pid="29" name="return to your dorm pt. 3" tags="desk" position="394,3484" size="100,100">You sit at your desk and start hacking away at the work you&#39;ve got to do. Your roommate looks over your shoulder, and asks what you&#39;re up to, so you [[fill her in-&gt;tell her]].</tw-passagedata><tw-passagedata pid="30" name="tell her" tags="desk" position="392,3634" size="100,100">&lt;&lt;if $doCals is &quot;true&quot;&gt;&gt;\
 She&#39;s not an engineer, but she&#39;s happy to sit and listen while you talk through the problem. Just doing so starts to help you wrap your own head around it all, and you start to see what may have been tripping you up. After a couple of hours, you break through your barrier and pinned down what you&#39;d be willing to bet is your bridge&#39;s maximum load within an ounce.
 
 You sleep well that night, feeling accomplished. Way to work hard!
 
-As the deadline approaches, your team [[gathers one last time-&gt;go to last meeting]].
 &lt;&lt;elseif $takeNotes is &quot;true&quot;&gt;&gt;\
 You show her the notes you&#39;ve been keeping, and how you&#39;ve even left out the parts where you stepped in to help other teammates with their own assigned tasks. She reassures you that your minutes are fine and mentions that your classmates sound like idiots sometimes. If she only knew...
 
 You go to sleep well knowing that at least someone has your back.
 
-As the deadline approaches, your team [[gathers one last time-&gt;go to last meeting]].
-&lt;&lt;else&gt;&gt;\
+&lt;&lt;elseif $takeNotes is &quot;false&quot; and $doCals is &quot;false&quot;&gt;&gt;\
 You show her the designs you&#39;ve been working up for your bridge, but explain how they aren&#39;t even using them. She loves the drawings you have, so she asks why they wouldn&#39;t use them. You don&#39;t want to tell her, but you never really showed them your drawings past mentioning quietly in a meeting that you had some ideas too. She liked your designs though, so that&#39;s a plus.
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="go to last meeting" tags="meeting" position="392,3782" size="100,100">&lt;&lt;if $doCals is &quot;true&quot;&gt;&gt;\
+&lt;&lt;endif&gt;&gt;
+As the deadline approaches, your team [[gathers one last time-&gt;go to last meeting]].</tw-passagedata><tw-passagedata pid="31" name="go to last meeting" tags="meeting" position="392,3782" size="100,100">&lt;&lt;if $doCals is &quot;true&quot;&gt;&gt;\
 You bring your final calculations to the last meeting and present them to your team. They are a little unsure&lt;&lt;if $bridgeDesign is &quot;false&quot;&gt;&gt;, because frankly they thought the failure load would be much greater&lt;&lt;endif&gt;&gt;. You assure them the calculations are correct. Another teammate double checks your work - in a respectful manner this time - and confirms your math checks out.
 
 &lt;&lt;elseif $takeNotes is &quot;true&quot;&gt;&gt;\
@@ -347,7 +344,11 @@ Before the last in-class meeting closes, the professor reminds everyone about te
 
 On the other hand though, there wasn&#39;t a whole lot of respect given your way. You don&#39;t just want to play the woman card, but some of your teammates may as well have been presenting their own TED talk on &quot;How to be sexist&quot; each meeting. That&#39;s what the critique are for anyway, and hopefully leaving honest comments will help them understand how difficult they were to work with, so maybe you should [[be harshly critical-&gt;be critical]].</tw-passagedata><tw-passagedata pid="33" name="be critical" tags="desk" position="318,4086" size="100,100">You decide honesty is the best policy, so you don&#39;t hold back much in your teammate reflection. Thankfully they&#39;re //anonymous//, but you&#39;re pretty sure they&#39;ll be able to guess who gave them such a poor review.
 
-At least they won&#39;t get to know until after [[presentation day]], and if they actually come well prepared then they&#39;ll still leave with a good grade.</tw-passagedata><tw-passagedata pid="34" name="say everything went ok" tags="desk" position="469,4086" size="100,100">You had some rough experiences, but it wasn&#39;t all bad. There were some awkward moments with some of the guys, but they probably didn&#39;t mean anything by it. Besides, you had fun working the project and getting to see it through till the end. You decide to focus on those good parts and leave a very generally positive review of everyone. Now you just have to hope they did the same for you as well, and come prepared for the final [[presentation day]].</tw-passagedata><tw-passagedata pid="35" name="presentation day" tags="class" position="409,4236" size="100,100">The next time your team is together you are all walking through the door, bridge in hand&lt;&lt;if $bridgeDesign is &quot;false&quot;&gt;&gt; through the door with what you hope passes as a bridge in hand&lt;&lt;endif&gt;&gt;.
+At least they won&#39;t get to know until after [[presentation day]], and if they actually come well prepared then they&#39;ll still leave with a good grade.</tw-passagedata><tw-passagedata pid="34" name="say everything went ok" tags="desk" position="469,4086" size="100,100">You had some rough experiences, but it wasn&#39;t all bad. There were some awkward moments with some of the guys, but they probably didn&#39;t mean anything by it. Besides, you had fun working the project and getting to see it through till the end. You decide to focus on those good parts and leave a very generally positive review of everyone. Now you just have to hope they did the same for you as well, and come prepared for the final [[presentation day]].</tw-passagedata><tw-passagedata pid="35" name="presentation day" tags="class" position="409,4236" size="100,100">do calcs: $doCalcs
+bridgeDesign: $bridgeDesign
+takeNotes: $takeNotes
+
+The next time your team is together you are all walking through the door, bridge in hand&lt;&lt;if $bridgeDesign is &quot;false&quot;&gt;&gt; through the door with what you hope passes as a bridge in hand&lt;&lt;endif&gt;&gt;.
 
 You watch as each group in turn presents their version of the semester long project. They are, in a way, all over the place. Some hold way more than teams calculated, while others just look great but aren&#39;t really functional. One team&#39;s bridge couldn&#39;t even hold it together enough to make it to the front. Thankfully it wasn&#39;t your team. Soon it&#39;s your group&#39;s time to shine&lt;&lt;if $bridgeDesign is &quot;false&quot;&gt;&gt;, or maybe just a dim glow would be nice too&lt;&lt;endif&gt;&gt;.
 
@@ -362,29 +363,37 @@ You make sure to carry your beautiful bridge to the front because, knowing your 
 
 &lt;&lt;else&gt;&gt;\
 You begin to bring your bridge up to the front, fully knowing that this is going to be an awfully embarassing ordeal. Your bridge design can barely hold its own weight, so the high calculation your team is about to hand in may as well be a joke. On the way to the front, you consider tripping just to save some embarassment. You laugh it off and [[turn in your janky bridge]].
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="receive your final grade" tags="desk" position="416,4496" size="100,100">Average Team Evaluation Grade: $teamOpinion%
-Final Grade: $finalGrade%
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="receive your final grade" tags="desk" position="416,4496" size="100,100">&lt;&lt;set $total = ($finalGrade - ((100-$teamOpinion)/2))&gt;&gt;
+Final Grade: $total%
+Average Team Evaluation Grade: $teamOpinion%
+$internalMotivation
+&lt;&lt;if $teamOpinion &gt;= 80&gt;&gt;\
+You&#39;re team really enjoyed working with you. They didn&#39;t really have a reason to review you poorly as you never cause any disruptions. Sure, you guys may not have gotten as high a grade as if you participated, but you weren&#39;t a difficult teammate to work with. You start to wonder if stepping in a bit more to fix the glaring problems would have possibly been a better solution even though your team may not have enjoyed working with you as much.
 
-Here we tell the player their final grade, and also a qualitative thing about teammate evals depending on the eval percentage: 0-50 is unfavorable, 50-70 is &quot;adequate&quot; or &quot;average&quot;, and 70+ is &quot;favorable&quot;. fun language here about whether they thought she was pleasant or rude (because that&#39;s what matters)
+&lt;&lt;elseif $teamOpinion &gt;= 60&gt;&gt;\
+The team evaluation hurt your grade a bit, but overall they didn&#39;t mind working with you. Yeah, sixty is a bit on the low side, but //some// of your group members didn&#39;t appreciate what they called &quot;your aggressive nature.&quot; What else would you do though? Each time you stepped up you were correct in doing so, and there were many things you let roll off your back that they aren&#39;t even aware of.
 
-&lt;&lt;if $finalGrade &gt;= 85&gt;&gt;
-&lt;&lt;set internalMotivation += 5&gt;&gt;
-&lt;&lt;elseif $finalGrade &lt;= 75&gt;&gt;
-&lt;&lt;set internalMotivation -=5&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+You felt really good about the bridge you turned in, but this pulled your grade back down. Sure, you had to make quite a few stands, but if you didn&#39;t then your bridge would have woefully underperformed compared to the others in class...well //most// of the other bridges (RIP group 3). At least every time you did cause some tension, it was to correct an error that could have dropped your grade even more. Besides, with the grade you got and your teammate evaluations being so low, that all but confirms your bridge earned a very high grade without considering the negative peer review, and for that you&#39;ll still walk away proud.
 &lt;&lt;endif&gt;&gt;
 
-[[epilogue]]</tw-passagedata><tw-passagedata pid="37" name="epilogue" tags="campus" position="416,4644" size="100,100">3-4 endings depending on internal motivation score.
+&lt;&lt;if $finalGrade &gt;= 85&gt;&gt;
+&lt;&lt;set $internalMotivation += 5&gt;&gt;
+&lt;&lt;elseif $finalGrade &lt;= 75&gt;&gt;
+&lt;&lt;set $internalMotivation -=5&gt;&gt;
+&lt;&lt;endif&gt;&gt;
 
-(Do well, people don&#39;t like you as much)
+[[epilogue]]</tw-passagedata><tw-passagedata pid="37" name="epilogue" tags="campus" position="416,4644" size="100,100">&lt;&lt;if $internalMotivation &gt;= 80&gt;&gt;\
 You try to understand why your teammates couldn&#39;t get it through their thick skulls and just appreciate the easy A. Leaving such negative reviews like that is criminal after you had to fight to correct their mistakes at every turn. At least one thing was confirmed: whatever any stereotype or fight song says, you are one helluva engineer.
 
-(Do okay, be an advicate while still maintaining relationships)
+&lt;&lt;elseif $internalMotivation &gt;= 60&gt;&gt;\
 Your grade isn&#39;t as high as you would have hoped, but you can&#39;t say you were suprised. There were a few things you would have done differently if you had them your way, but it would have been difficult to keep pushing for every little thing.  It was a group project after all, and your groupmates just happened to not be as well equiped. You know one thing though: after going though that trial by fire, you definitely know you&#39;ll be joining that Women in Engineering group because there are some gender imbalance issues that need fixing.
 
-(Drop out/ swap majors you enjoy people better but not cut out for engineering)
+&lt;&lt;elseif $internalMotivation &gt;= 50&gt;&gt;\
 Yeah...that was rough. You finish up the semester without even maintaining a high enough GPA to continue. You&#39;d have to retake a few courses - including professor &quot;group bridge builder&quot; over here, which was stressful enough the first go around. You figure maybe engineering isn&#39;t a good fit for you.
 
-You switch to a degree in creative writing which is heavily discussion based, but at least people seem to care about what you have to say there both in pen and in class. With the additional success you stay motivated, and everything turns out well.</tw-passagedata><tw-passagedata pid="38" name="You nod your head" tags="meeting" position="76,1161" size="100,100">He brings up how calculating these values will include multiple tests focusing on the strength of the selected material and scale models to give an accurate understanding of the forces present when adding weight to the project.
+You switch to a degree in creative writing which is heavily discussion based, but at least people seem to care about what you have to say there both in pen and in class. With the additional success you stay motivated, and everything turns out well.
+&lt;&lt;endif&gt;&gt;\</tw-passagedata><tw-passagedata pid="38" name="You nod your head" tags="meeting" position="76,1161" size="100,100">He brings up how calculating these values will include multiple tests focusing on the strength of the selected material and scale models to give an accurate understanding of the forces present when adding weight to the project.
 
 [[You agree]] and add that you have experience working those systems and remind him not to forget the way the shape of the bridge structure effects max load.</tw-passagedata><tw-passagedata pid="39" name="You agree" tags="meeting" position="68,1317" size="100,100">He mentions that not only the material but the actual shape of the bridge will have a dramatic impact on the maximum amount of load the bridge can bear.
 
