@@ -182,6 +182,7 @@ body[data-tags~="closet"] {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">(function () {
 	var preload = ["https://erinjktruesdell.com/wp-content/uploads/2019/09/meetingTable-1.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/closet.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/dormroom.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/desk-1.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/classroom.png", "https://erinjktruesdell.com/wp-content/uploads/2019/09/campus-1.png"];
 
@@ -211,14 +212,15 @@ body[data-tags~="closet"] {
 
 
 
-</script><tw-passagedata pid="1" name="First Day" tags="closet" position="403,149" size="100,100">&lt;&lt;audio campus play loop&gt;&gt;
+
+</script><tw-passagedata pid="1" name="First Day" tags="closet" position="403,149" size="100,100">&lt;&lt;audio campus play loop&gt;&gt;\
 You wake up not-so-well rested. You were too excited to sleep last night, as today is your first day of college and first impressions are a big deal. Speaking of... What are you going to wear? You head over to your closet and put on a [[dress]] or some [[jeans]].</tw-passagedata><tw-passagedata pid="2" name="dress" tags="closet" position="328,320" size="100,100">&lt;&lt;audio dorm play&gt;&gt;
 You put on your favorite dress and head to class. After you walk in the building, someone mentions you may be looking for the education building next door. You inform them that you are supposed to be here. As you attempt to storm off, you uncomfortably walk down the hallway in the same direction to your [[first class]].&lt;&lt;nobr&gt;&gt;
 
 &lt;&lt;set $internalMotivation -= 5&gt;&gt;
-&lt;&lt;endnobr&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="jeans" tags="closet" position="478.3333333333333,321" size="100,100">&lt;&lt;audio dorm play&gt;&gt;
-You quickly jump into a pair of blue jeans, throw on a NASA t-shirt, and head out the door...then you walk back in the door to brush your teeth and finish getting ready. Now you&#39;re actually ready to head to your [[first class]]!</tw-passagedata><tw-passagedata pid="4" name="first class" tags="class" position="413,499" size="100,100">&lt;&lt;audio campus fadeout&gt;&gt;
-&lt;&lt;audio classroom play loop&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="jeans" tags="closet" position="478,321" size="100,100">&lt;&lt;audio dorm play&gt;&gt;
+You quickly jump into a pair of blue jeans, throw on a NASA t-shirt, and head out the door...then you walk back in the door to brush your teeth and finish getting ready. Now you&#39;re actually ready to head to your [[first class]]!</tw-passagedata><tw-passagedata pid="4" name="first class" tags="class" position="413,499" size="100,100">&lt;&lt;audio campus fadeout&gt;&gt;\
+&lt;&lt;audio classroom play loop&gt;&gt;\
 You take a seat at one of the tables in your first ever college engineering class! You&#39;ve pushed hard through high school just to be able to sit in this chair, and all that work is finally paying off.
 
 You look up to see your professor wasting no time jumping into the first project. Did he even go over the syllabus?
@@ -250,7 +252,7 @@ You did it. You stood up for yourself, but you may have ruffled some feathers in
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $finalGrade -= 10&gt;&gt;
 &lt;&lt;set $teamOpinion -= 15&gt;&gt;
-&lt;&lt;endnobr&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="team divides tasks" tags="meeting" position="412,996.3333333333334" size="100,100">&lt;&lt;audio classroom fadeout&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="team divides tasks" tags="meeting" position="412,996" size="100,100">&lt;&lt;audio classroom fadeout&gt;&gt;
 Your team moves on and continues to divvy up the tasks in the project. Someone mentions that there should be a designated person in charge of ensuring the math calculations are accurate. A major part of this grade is calculating the max load of the bridge before failure, and that is right up your alley - you think you&#39;ll do a good job because you&#39;ve done it before. Will the other guys trust you to do that? You get caught up second guessing yourself, but someone has to say something. You see another guy in the group contemplate taking the role, and he may take it if you don&#39;t.
 
 Should you [[speak up]] or pass and [[let him take it]]?</tw-passagedata><tw-passagedata pid="9" name="speak up" tags="meeting" position="339,1148" size="100,100">You say you want to do the task. Another guy asks how much experience you have had working with these kinds of equations, and you assure him that you&#39;ve done them before. You mention you worked on a similar project involving load bearing in high school.
@@ -312,7 +314,7 @@ You did what you could, but you don&#39;t feel great as [[the meeting ends-&gt;e
 Before you head out you schedule your next meeting time, then [[head back to your dorm-&gt;return to your dorm pt. 2]].
 &lt;&lt;elseif $takeNotes is &quot;false&quot;&gt;&gt;\
 Before you head out, your teammate thanks you for the reminder and remembers to schedule your next meeting time. You then [[head back to your dorm-&gt;return to your dorm pt. 2]].
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="return to your dorm pt. 2" tags="dorm" position="378.3333333333333,2647.6666666666665" size="100,100">&lt;&lt;audio meeting fadeout&gt;&gt;
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="return to your dorm pt. 2" tags="dorm" position="378,2647" size="100,100">&lt;&lt;audio meeting fadeout&gt;&gt;
 &lt;&lt;audio dorm play&gt;&gt;
 You return to your dorm and your roommate is complaining about a rude professor. They expect the class to do an unnecessary amount of work and then chastised everyone for &quot;not being serious about their major&quot; when the class tried to get the workload lightened.
 
@@ -376,7 +378,7 @@ Duncan says that he can see the improvment in your notes after the two of you di
 You continue to sketch bridge designs quietly to yourself hopeing that someone asks to see them. You know that the bridge is already all, but made however you hope someone asks just so they can know that you actually have been doing something for this project.
 &lt;&lt;endif&gt;&gt;\
 
-Before the last in-class meeting closes, the professor reminds everyone about teammate evaluations being due. He stresses that they do weigh in on each individual&#39;s final grade so he hopes each of you will be fair and honest. [[The whole walk back you debate what you&#39;re going to say-&gt;go home and evaluate your teammates]].</tw-passagedata><tw-passagedata pid="32" name="go home and evaluate your teammates" tags="desk" position="392.3333333333333,3936" size="100,100">&lt;&lt;audio meeting fadeout&gt;&gt;
+Before the last in-class meeting closes, the professor reminds everyone about teammate evaluations being due. He stresses that they do weigh in on each individual&#39;s final grade so he hopes each of you will be fair and honest. [[The whole walk back you debate what you&#39;re going to say-&gt;go home and evaluate your teammates]].</tw-passagedata><tw-passagedata pid="32" name="go home and evaluate your teammates" tags="desk" position="392,3936" size="100,100">&lt;&lt;audio meeting fadeout&gt;&gt;
 &lt;&lt;audio keyboard fadein&gt;&gt;
 You open the door and aren&#39;t exactly sure what you should do. If you&#39;re critical of your teammates then they will almost certainly assume it was you, and if they get a bad grade because of it then they&#39;ll probably get pissed. It sucked, but you guess it wasn&#39;t //too// bad, so maybe you should [[go easy on them-&gt;say everything went ok]].
 
@@ -406,7 +408,7 @@ Average Team Evaluation Grade: $teamOpinion%
 You&#39;re team really enjoyed working with you. They didn&#39;t really have a reason to review you poorly as you never cause any disruptions. Sure, you guys may not have gotten as high a grade as if you participated, but you weren&#39;t a difficult teammate to work with. You start to wonder if stepping in a bit more to fix the glaring problems would have possibly been a better solution even though your team may not have enjoyed working with you as much.
 
 &lt;&lt;elseif $teamOpinion &gt;= 60&gt;&gt;\
-The team evaluation hurt your grade a bit, but overall they didn&#39;t mind working with you. Yeah, sixty is a bit on the low side, but //some// of your group members didn&#39;t appreciate what they called &quot;your aggressive nature.&quot; What else would you do though? Each time you stepped up you were correct in doing so, and there were many things you let roll off your back that they aren&#39;t even aware of.
+The team evaluation hurt your grade a bit, but overall they didn&#39;t mind working with you. Yeah, your final grade is a bit on the low side, but //some// of your group members didn&#39;t appreciate what they called &quot;your aggressive nature.&quot; What else would you do though? Each time you stepped up you were correct in doing so, and there were many things you let roll off your back that they aren&#39;t even aware of.
 
 &lt;&lt;else&gt;&gt;\
 You felt really good about the bridge you turned in, but this pulled your grade back down. Sure, you had to make quite a few stands, but if you didn&#39;t then your bridge would have woefully underperformed compared to the others in class...well //most// of the other bridges (RIP group 3). At least every time you did cause some tension, it was to correct an error that could have dropped your grade even more. Besides, with the grade you got and your teammate evaluations being so low, that all but confirms your bridge earned a very high grade without considering the negative peer review, and for that you&#39;ll still walk away proud.
@@ -456,7 +458,7 @@ You wish he could&#39;ve done that a bit sooner or maybe in one of the meetings,
 
 You feel a sharp pain then a familiar sensation.
 
-You&#39;re falling back through [[the ether.]] </tw-passagedata><tw-passagedata pid="50" name="turn in your janky bridge" tags="class" position="298.66666666666663,4370.333333333333" size="100,100">Your professor begins to add weight and to your suprise it holds one plate. Just as he is going to add a second, it crumples under the weight. He decides to just stack the second one on top anyway to at least try to lessen the blow. It&#39;s no where near the predicted amount, but it&#39;s a sweet gesture. Your teammates don&#39;t waste any time shuffling out of the classroom.&lt;&lt;audio break play&gt;&gt;
+You&#39;re falling back through [[the ether.]] </tw-passagedata><tw-passagedata pid="50" name="turn in your janky bridge" tags="class" position="298,4370" size="100,100">Your professor begins to add weight and to your suprise it holds one plate. Just as he is going to add a second, it crumples under the weight. He decides to just stack the second one on top anyway to at least try to lessen the blow. It&#39;s no where near the predicted amount, but it&#39;s a sweet gesture. Your teammates don&#39;t waste any time shuffling out of the classroom.&lt;&lt;audio break play&gt;&gt;
 
 [[You hear someone call from behind you when you get out into the hall-&gt;nice teammate]].</tw-passagedata><tw-passagedata pid="51" name="start" tags="First-Screen campus" position="398,9" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $internalMotivation to 100&gt;&gt;
@@ -465,8 +467,8 @@ You&#39;re falling back through [[the ether.]] </tw-passagedata><tw-passagedata 
 &lt;&lt;set $takeNotes to &quot;false&quot;&gt;&gt;
 &lt;&lt;set $doCalcs to &quot;false&quot;&gt;&gt;
 &lt;&lt;set $bridgeDesign to &quot;false&quot;&gt;&gt;
-&lt;&lt;endnobr&gt;&gt;&lt;div id=&quot;mainTitle&quot; style=&quot;margin: auto;&quot;&gt;Bridging the Gap&lt;/div&gt;
-&lt;div id=&quot;startButton&quot; style=&quot;margin: auto;&quot;&gt;[[Start-&gt;First Day]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="StoryInit" tags="" position="1180,551.6666666666667" size="100,100">&lt;&lt;cacheaudio &quot;meeting&quot; &quot;https://erinjktruesdell.com/wp-content/uploads/2019/09/MeetingNotes.wav&quot;&gt;&gt;
+&lt;&lt;endnobr&gt;&gt;&lt;div id=&quot;mainTitle&quot; style=&quot;margin: auto;&quot;&gt;Bridging the Gap&lt;/div&gt;\
+&lt;div id=&quot;startButton&quot; style=&quot;margin: auto;&quot;&gt;[[Start-&gt;First Day]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="StoryInit" tags="" position="1180,551" size="100,100">&lt;&lt;cacheaudio &quot;meeting&quot; &quot;https://erinjktruesdell.com/wp-content/uploads/2019/09/MeetingNotes.wav&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;classroom&quot; &quot;https://erinjktruesdell.com/wp-content/uploads/2019/09/Classroom.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;dorm&quot; &quot;https://erinjktruesdell.com/wp-content/uploads/2019/09/DormDoor.wav&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;keyboard&quot; &quot;https://erinjktruesdell.com/wp-content/uploads/2019/09/Keyboard.mp3&quot;&gt;&gt;
